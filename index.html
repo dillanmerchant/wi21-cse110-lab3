@@ -3,7 +3,14 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <link rel="icon" href="images/tab2.png">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+    <style>
+      h1 {
+        position: fixed;
+        left: 85%;
+      }
+    </style>
     <title>Dillan Merchant's User Page</title>
   </head>
 
@@ -21,7 +28,7 @@
     <div>
         <figure>
           <img src="Slide3.jpg">
-          <figcaption>Fig 1 - Dillan Merchant</figcaption>
+          <figcaption style="font-size: 2vw;">Fig 1 - Dillan Merchant</figcaption>
         </figure>
     </div>
       
@@ -29,12 +36,14 @@
     <aside>
         <p>I joined a competitive team my first year of college</p>
     </aside>
-    <p>One of my favorite hobbies is <strong>Dance</strong>. I have joined some clubs in high school such as breakdancing and one for charity.<br>I love to
+    <p style="font-size: 1cm;">One of my favorite hobbies is <strong>Dance</strong>. I have joined some clubs in high school such as breakdancing and one for charity.<br>I love to
     really be able to feel and <em>express</em> the music through body motions</p>
+    <div class="charity"></div>
     <picture>
         <source srcset="dance.JPG">
         <img src="dance.JPG"/>
-    </picture>  
+    </picture>
+    <p><a href="https://www.youtube.com/watch?v=7ymgXIyVebk&t=2105s&ab_channel=DillanMerchant" target="_blank">Watch the Dance!</a></p>
       
     <section>
         <pre>
@@ -44,136 +53,159 @@
             This is the charity event
         </pre>
         <hr>
-        <h3>Random Facts</h3>
-        <ul>
-          <li>I have the same birthday as my sister although we are 4 years apart</li>
-          <li>My favorite Data Structure is the HashMap - I find the <code>containsKey()</code> method very helpful in many of my problems</li>
-          <li>I am starting to get interested in filming and editing</li>
-          <li>This is my favorite song currently</li>    
-        </ul>
-        <figure>
-            <figcaption>Song:</figcaption>
-            <audio
-                controls
-                src="mystery.mp3">
-                    Sorry, your browser does not support
-            </audio>
-        </figure>
+        <div id="random">
+          <h3>Random Facts</h3>
+          <ul>
+            <li>I have the same birthday as my sister although we are 4 years apart</li>
+            <li>My favorite Data Structure is the HashMap - I find the <code>containsKey()</code> method very helpful in many of my problems</li>
+            <li>I am starting to get interested in filming and editing</li>
+            <li>This is my favorite song currently</li>    
+          </ul>
+          <figure>
+              <figcaption>Song:</figcaption>
+              <audio
+                  controls
+                  src="mystery.mp3">
+                      Sorry, your browser does not support
+              </audio>
+          </figure>
+        </div>
         <video width="640" height="480" src="Zion.mp4" controls> 
             Sorry, your browser doesn't support  
         </video>
-        <details>
+        <details class="zion">
             <summary>Zion</summary>
             <p>Went on a trip with high school friends and was able to capture the best moments</p>
-          </details>
+        </details>
       </section>
       
-      <div>
+      <div class="todo">
         <h3>Here is my todo list</h3>
         <ol>
           <li>Finish this lab</li>
           <li>Get an A in this class</li>
           <li>Graduate</li>
         </ol>
+        <p>When will I finish all this?</p>
+        <span id="completion" style="font-size: 2pc;">I shall work hard on it finishing it fast though</span>
+        <span style="font-size: 30pt;">Watch me!!!</span>
       </div>
 
-
-      <table>
-        <caption>Schedule</caption>
-        <colgroup>
-            <col span="3">
-        </colgroup>
-        <tr>
-          <th>Class</th>
-          <th>Professor</th> 
-          <th>Time</th>
-        </tr>
-        <tr>
-          <td>CSE 110</td>
-          <td>Powell</td>
-          <td>MWF</td>
-        </tr>
-        <tr>
-          <td>CSE 101</td>
-          <td>Jones</td>
-          <td>TuTh</td>
-        </tr>
-        <tr>
-          <td>CSE 151A</td>
-          <td>Chaudhuri</td>
-          <td>MWF</td>
-        </tr>
-        <tr>
-            <td>TDMV 143</td>
-            <td>Foster-King</td>
-            <td>MW</td>
+      <div id="schedule">
+        <table>
+          <caption>Schedule</caption>
+          <colgroup>
+              <col span="3">
+          </colgroup>
+          <tr>
+            <th>Class</th>
+            <th>Professor</th> 
+            <th>Time</th>
           </tr>
-      </table>
+          <tr>
+            <td>CSE 110</td>
+            <td>Powell</td>
+            <td>MWF</td>
+          </tr>
+          <tr>
+            <td>CSE 101</td>
+            <td>Jones</td>
+            <td>TuTh</td>
+          </tr>
+          <tr>
+            <td>CSE 151A</td>
+            <td>Chaudhuri</td>
+            <td>MWF</td>
+          </tr>
+          <tr>
+              <td>TDMV 143</td>
+              <td>Foster-King</td>
+              <td>MW</td>
+            </tr>
+        </table>
+      </div>
+
       <br>
 
-      <h3>Let me get to know you!</h3>
-      <form>
-        <fieldset>
-            <legend>About you:</legend>
-            <label>Name:</label><br>
-            <input type="text"><br>
-            <label>Gender:</label><br>
-            <input type="radio">
-            <label>Male</label>
-            <input type="radio">
-            <label>Female</label>
-            <input type="radio">
-            <label>Other</label><br>
+      <section class="form">
+        <h3>Let me get to know you!</h3>
+        <form>
+          <fieldset>
+              <legend>About you:</legend>
+              <label>Name:</label><br>
+              <input type="text"><br>
+              <label>Gender:</label><br>
+              <input type="radio">
+              <label>Male</label>
+              <input type="radio">
+              <label>Female</label>
+              <input type="radio">
+              <label>Other</label><br>
 
-            <input type="checkbox">
-            <label>Select if you like dogs</label><br>
-            <input type="date">
-            <label>What is today's date?</label><br>
-            <input type="time">
-            <label>What time is it?</label><br>
-            <input type="color">
-            <label>What is your favorite color?</label><br>
-            <input type="range">
-            <label>How happy are you currently to scale?</label><br>
-            <input type="submit">
-            <label>Submit a message for me</label><br>
-            <input type="email">
-            <label>What is your email?</label><br>
-            <input type="number">
-            <label>What is your favorite number?</label><br>
-            <label>Favorite Sport?</label><br>
-            <input list="sports">
-            <datalist>
-                <option value="Baseball">
-                <option value="Soccer">
-                <option value="Football">
-                <option value="Tennis">
-                <option value="Basketball">
-              </datalist><br>
+              <input type="checkbox">
+              <label>Select if you like dogs</label><br>
+              <input type="date">
+              <label>What is today's date?</label><br>
+              <input type="time">
+              <label>What time is it?</label><br>
+              <input type="color">
+              <label>What is your favorite color?</label><br>
+              <input type="range">
+              <label>How happy are you currently to scale?</label><br>
+              <input type="submit">
+              <label>Submit a message for me</label><br>
+              <input type="email">
+              <label>What is your email?</label><br>
+              <input type="number">
+              <label>What is your favorite number?</label><br>
+              <label>Favorite Sport?</label><br>
+              <input list="sports">
+              <datalist>
+                  <option value="Baseball">
+                  <option value="Soccer">
+                  <option value="Football">
+                  <option value="Tennis">
+                  <option value="Basketball">
+                </datalist><br>
 
-            <label>Choose a flavor:</label>
-            <select>
-                <optgroup label="Classics">
-                    <option>Chocolate</option>
-                    <option>Vanilla</option>
-                    <option>Strawberry</option>
-                </optgroup>
-                <optgroup label="Other">
-                    <option>Pecan</option>
-                    <option>Cheesecake</option>
-                    <option>Cookies & Cream</option>
-                </optgroup>
-            </select>
-            <br>
-            <textarea>Thank you for filling out the form! It was great getting to know you. Do you have nay more remarks?</textarea>
-        </fieldset>
-      </form>
+              <label>Choose a flavor:</label>
+              <select>
+                  <optgroup label="Classics">
+                      <option>Chocolate</option>
+                      <option>Vanilla</option>
+                      <option>Strawberry</option>
+                  </optgroup>
+                  <optgroup label="Other">
+                      <option>Pecan</option>
+                      <option>Cheesecake</option>
+                      <option>Cookies & Cream</option>
+                  </optgroup>
+              </select>
+              <br>
+              <textarea>Thank you for filling out the form! It was great getting to know you. Do you have nay more remarks?</textarea>
+          </fieldset>
+        </form>
+      </section>
 
-      <button type="button">Click me if you want to go back to in-person learning</button>
+      <button type="button" style="font-size: 2em;">Click me if you want to go back to in-person learning</button>
 
         <template>
             <h2>This heading may be hidden</h2>
         </template>
+
+      <div class="flexbox">
+        <div><p>Flex Item 1</p></div>
+        <div><p>Flex Item 2</p></div>
+        <div><p>Flex Item 3</p></div>
+        <div><p>Flex Item 4</p></div>
+      </div>
+
+      <div id="gridbox">
+        <div id="first">Grid Item 1</div>
+        <div id="second">Grid Item 2</div>
+        <div id="third">Grid Item 3</div>
+        <div id="fourth">Grid Item 4</div>
+      </div>
       
       </body>
         

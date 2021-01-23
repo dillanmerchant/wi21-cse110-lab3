@@ -1,0 +1,146 @@
+/*universal selector*/
+* {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #ADD8E6;
+}
+
+a:hover {
+    color: #FF00FF;
+}
+
+a:active {
+    color: #0000FF;
+}
+
+a[target="_blank"] {
+    background-color: rgb(142, 226, 142);
+}
+
+div span {
+    text-decoration: underline;
+    text-align: center;
+    color: hsla(240, 100%, 50%, 0.5);
+}
+
+/*for the to-do list*/
+.todo {
+    border-style: dotted;
+    border-color: white;
+    border-width: 5px;
+    border-radius: 25px;
+    margin: 30px;
+    padding-top: 30px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+}
+
+/*for my schedule*/
+#schedule {
+    color: rgba(255, 0, 0, 0.3);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-style: dotted;
+    padding: 20px;
+    height: 20vh;
+    width: 50%;
+    display: block;
+    position: relative;
+}
+
+#random {
+    max-width: 100%;
+    min-width: 50%;
+}
+
+.form {
+    margin: auto;
+    position: static;
+}
+
+table, th, td {
+    border: 1px solid black;
+    position: sticky;
+}
+
+#completion {
+    display: block;
+    position: absolute;
+    left: 20%;
+}
+
+.zion {
+    display: inline-block;
+}
+
+.todo li {
+    color: #800000;
+}
+
+div > p {
+    color: black;
+    font-family: 'Courier New', monospace;
+}
+
+div + p {
+    color: blueviolet;
+}
+
+h3 ~ ul {
+    border: burlywood 1px solid;
+}
+
+label {
+    font-size: 25px;
+}
+
+
+/*Flexbox*/
+div.flexbox {
+    border: 1px solid black;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.flexbox div {
+    order: 5;
+    flex-grow: 4;
+    flex-shrink: 3;
+    border: solid 1px black;
+}
+
+/*Grid*/
+
+#gridbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+#first {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: greenyellow;
+}
+
+#second {
+    grid-column-end: span 2;
+}
+
+/*Media Query*/
+@media only screen and (max-width: 600px) {
+    * {
+        background-color: hsl(177, 20%, 40%);
+    }
+}
